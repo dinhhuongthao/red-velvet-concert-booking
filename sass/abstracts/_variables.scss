@@ -7,21 +7,28 @@ $color-grey-1: #eee;
 $color-grey-2: #ccc;
 $color-grey-3: #777;
 
-$color-red-primary: #b32134;
+$color-red-primary: hsl(352, 69%, 42%);
 
-$color-red-light-1: #EFBDC4;
-$color-red-light-3: #ff2f4a;
+$color-red-light-1: #ffecee;
+$color-red-light-2: #ff2f4a;
 
 $color-red-dark-1: #801725;
 $color-red-dark-2: #66121d;
+
+$to-right-light-dark-red: linear-gradient(to right, $color-red-light-2, $color-red-dark-1);
 
 // BOX
 $box-shadow-high: 0 1.5rem 4rem rgba($color-black, .2);
 $box-shadow-low: 0 1.5rem 3rem rgba($color-black, .4);
 
+
+
 // CUBIC-BEZIER
 // $ease-out-back: cubic-bezier(.22,.9,.84,1.14);
 $ease-out-back: cubic-bezier(.63,.18,.21,1.27);
+
+// FONT
+$default-font-size: 1.6rem;
 
 // GRID
 $grid-width: 144rem;
