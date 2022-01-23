@@ -1,5 +1,32 @@
+/// COLOR (darker ascending)
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-1: #eee;
+$color-grey-2: #ccc;
+$color-grey-3: #777;
+
+$color-red-primary: #b32134;
+
+$color-red-light-1: #EFBDC4;
+$color-red-light-3: #ff2f4a;
+
+$color-red-dark-1: #801725;
+$color-red-dark-2: #66121d;
+
+// BOX
+$box-shadow-high: 0 1.5rem 4rem rgba($color-black, .2);
+$box-shadow-low: 0 1.5rem 3rem rgba($color-black, .4);
+
+// CUBIC-BEZIER
+// $ease-out-back: cubic-bezier(.22,.9,.84,1.14);
+$ease-out-back: cubic-bezier(.63,.18,.21,1.27);
+
 // GRID
 $grid-width: 144rem;
 
 $gap-horizontal: 6rem;
 $gap-vertical: 8rem;
+
+// 

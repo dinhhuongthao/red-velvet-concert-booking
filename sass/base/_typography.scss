@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading-primary {
+  color: $color-white;
+
+  &--main {
+    font-size: 6rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    font-weight: 200;
+
+    animation: moveInLeft 1s $ease-out-back .4s;
+
+  }
+  
+  &--sub {
+    font-size: 2rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    font-weight: 600;
+
+    animation: moveInRight 1s $ease-out-back .4s;
+
+  }
+
+}

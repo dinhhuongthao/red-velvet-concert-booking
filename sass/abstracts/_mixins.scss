@@ -5,3 +5,25 @@
     clear: both;
   }
 }
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// BOX SHADOW
+/*
+  - $high
+  - $low
+*/
+@mixin box-shadow($pos) {
+  @if $pos == high {
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+  }
+
+  @if $pos == low {
+    box-shadow: 0 1rem 4rem rgba($color-black, .2);
+  }
+}
