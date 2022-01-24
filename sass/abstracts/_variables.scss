@@ -16,11 +16,13 @@ $color-red-dark-1: #801725;
 $color-red-dark-2: #66121d;
 
 $to-right-light-dark-red: linear-gradient(to right, $color-red-light-2, $color-red-dark-1);
+$to-right-bottom-light-dark-red: linear-gradient(to right, rgba($color-red-light-2, .8), rgba($color-red-dark-1, .8));
 
 // BOX
 $box-shadow-high: 0 1.5rem 4rem rgba($color-black, .2);
 $box-shadow-low: 0 1.5rem 3rem rgba($color-black, .4);
 
+$border-radius-default: 3px;
 
 
 // CUBIC-BEZIER
@@ -31,7 +33,7 @@ $ease-out-back: cubic-bezier(.63,.18,.21,1.27);
 $default-font-size: 1.6rem;
 
 // GRID
-$grid-width: 144rem;
+$grid-width: 114rem;
 
 $gap-horizontal: 6rem;
 $gap-vertical: 8rem;

@@ -33,10 +33,20 @@ body {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: .2rem;
+  font-weight: 700;
 
   color: transparent;
   background-image: linear-gradient(to right, $color-red-light-2, $color-red-dark-1);
   -webkit-background-clip: text;
+
+  transition: all .2s ease;
+  
+  &:hover {
+    transform: skewX(13deg) skewY(2deg) scale(1.1);
+    @include shadow(text, light-lower);
+  }
 
 }
 

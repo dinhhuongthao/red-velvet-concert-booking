@@ -1,29 +1,53 @@
 @mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 @mixin absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 // BOX SHADOW
-@mixin box-shadow($pos) {
-  @if $pos == normal {
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-  }
+@mixin shadow($type, $pos) {
+	@if $type == text {
+		@if $pos == lower {
+			text-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+		}
 
-  @if $pos == dark-1 {
-    box-shadow: 0 1rem 3rem rgba($color-black, .2);
-  }
+		@if $pos == higher {
+			text-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+		}
 
-  @if $pos == light-1 {
-    box-shadow: 0 2rem 5rem rgba($color-black, .2);
-  }
+		@if $pos == light-lower {
+			text-shadow: 0 0.8rem 1.5rem rgba($color-black, 0.15);
+		}
+
+		@if $pos == light-higher {
+			text-shadow: 0 1rem 2rem rgba($color-black, 0.25);
+		}
+	}
+
+	@if $type == box {
+		@if $pos == lower {
+			box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+		}
+
+		@if $pos == higher {
+			box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+		}
+
+		@if $pos == light-lower {
+			box-shadow: 0 0.8rem 1.5rem rgba($color-black, 0.15);
+		}
+
+		@if $pos == light-higher {
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.25);
+		}
+	}
 }
