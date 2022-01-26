@@ -1,0 +1,177 @@
+.card {
+	perspective: 150rem; // pers apply for child onl
+	position: relative;
+	height: 52rem;
+
+	// FUNCTIONALITY
+	&__side {
+		width: 100%;
+		height: 52rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all 1s ease;
+		backface-visibility: hidden;
+		border-radius: $border-radius-default;
+
+		overflow: hidden;
+
+		&--front {
+			background-color: $color-white;
+		}
+
+		&--back {
+			transform: rotateY(180deg);
+
+			&-1 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-red-light-2,
+					$color-red-dark-2
+				);
+			}
+
+			&-2 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-red-primary,
+					$color-red-dark-2
+				);
+			}
+
+			&-3 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-red-dark-1,
+					$color-red-dark-2
+				);
+			}
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0deg);
+	}
+	// FRONT SIDE
+
+	&__img {
+		height: 20rem;
+		background-size: cover;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+		&--1 {
+			background-image: linear-gradient(
+					to bottom,
+					transparent -200%,
+					rgba($color-red-light-2, 0.5)
+				),
+				url(../img/card-1.jpg);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+					to bottom,
+					transparent -200%,
+					rgba($color-red-primary, 0.5)
+				),
+				url(../img/card-2.jpg);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+					to bottom,
+					transparent -200%,
+					rgba($color-red-dark-1, 0.5)
+				),
+				url(../img/card-3.jpg);
+		}
+	}
+
+	&__heading {
+		position: absolute;
+		font-size: 2.8rem;
+		text-transform: uppercase;
+		right: 0;
+		top: 13rem;
+		right: 2rem;
+		width: 70%;
+		font-weight: 200;
+		color: $color-white;
+		text-align: right;
+
+		&-span {
+			padding: 1rem 2.5rem;
+			-webkit-box-decoration-break: clone;
+
+			&--1 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-red-light-2, 0.8),
+					rgba($color-red-dark-2, 0.8)
+				);
+			}
+
+			&--2 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-red-primary, 0.8),
+					rgba($color-red-dark-2, 0.8)
+				);
+			}
+
+			&--3 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-red-dark-1, 0.8),
+					rgba($color-red-dark-2, 0.8)
+				);
+			}
+		}
+	}
+
+	&__detail {
+		padding: 3rem;
+
+		ul {
+			list-style: none;
+			text-align: center;
+			margin: 0 auto;
+			width: 80%;
+
+			li {
+				font-size: 1.5rem;
+				color: $color-red-primary;
+				padding: 0.8rem;
+
+				&:not(:last-child) {
+					border-bottom: solid rgba($color-red-primary, 0.2) 1px;
+				}
+			}
+		}
+	}
+
+	// BACK SIDE
+
+	&__cta {
+		@include absolute-center;
+		text-align: center;
+		width: 90%;
+	}
+
+	&__price-only {
+		color: $color-white;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value {
+		color: $color-white;
+		font-size: 6rem;
+		font-weight: 100;
+		margin-bottom: 6rem;
+	}
+}
