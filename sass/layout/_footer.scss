@@ -1,24 +1,64 @@
 .footer {
+  padding: 10rem 0;
   background-color: $color-red-dark-2;
 
   &__logo-box {
     text-align: center;
+    margin-bottom: 8rem;
   }
 
   &__logo {
-    width: 30rem;
+    width: 25rem;
   }
 
-  // &__navigation {
+  &__navigation {
+    padding-top: 2rem;
+    border-top: solid 1px $color-red-light-1;
+    display: inline-block;
 
-  // }
+  }
 
-  // &__item {
+  &__list {
+    list-style: none;
+  }
 
-  // }
+  &__item {
+    display: inline-block;
 
-  // &__link {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
 
-  // }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      color: $color-red-light-1;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      transform: rotate(7deg) scale(1.2);
+      color: $color-red-light-3;
+      @include shadow(box, lower);
+      background-color: $color-red-dark-2;
+    }
+  }
+
+  &__copyright {
+    padding-top: 2rem;
+    border-top: solid 1px $color-red-light-1;
+    float: right;
+    width: 80%;
+
+    font-size: 1.4rem;
+    color: $color-red-light-1;
+  }
 
 }
