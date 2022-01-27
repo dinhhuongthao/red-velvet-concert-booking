@@ -22,6 +22,11 @@
 
     &:not(:last-child) {
       margin-right: $gap-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+      }
     }
 
     @include respond(tab-port) {
