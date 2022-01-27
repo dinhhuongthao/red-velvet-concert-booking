@@ -1,7 +1,12 @@
 .section-about {
-	padding: 25vh 0;
+	padding: 30vh 0 15vh;
 	margin-top: -20vh;
 	background-color: $color-red-light-1;
+
+	@include respond(tab-port) {
+		padding: 25vh 0 20vh;
+
+	}
 }
 
 .section-features {
@@ -14,7 +19,7 @@
 	transform: skewY(-4deg);
 
 	@include respond(tab-port) {
-		padding: 20vh 0;
+		padding: 15vh 0;
 	}
 
 	& > * {
@@ -44,18 +49,40 @@
 }
 
 .section-book {
-	background-image: linear-gradient(to bottom, $color-red-light-2, $color-red-dark-1);
+	background-image: linear-gradient(
+		to bottom,
+		$color-red-light-2,
+		$color-red-dark-1
+	);
 	padding: 15rem 0;
 
 	.book {
-		background-image: linear-gradient(120deg, rgba($color-white, .85) 50%, transparent 50%), url('../img/form.jpg');
+		background-image: linear-gradient(
+				120deg,
+				rgba($color-white, 0.85) 50%,
+				transparent 50%
+			),
+			url("../img/form.jpg");
 		background-size: cover;
 		@include shadow(box, light-higher);
-
 
 		&__form {
 			padding: 6rem;
 			width: 50%;
+
+			@include respond(tab-port) {
+				width: 100%;
+				padding: 4rem;
+			}
+		}
+
+		@include respond(tab-port) {
+			background-image: linear-gradient(
+					to right,
+					rgba($color-white, 0.85) 100%,
+					transparent 100%
+				),
+				url("../img/form.jpg");
 		}
 	}
 }

@@ -79,7 +79,7 @@
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
-    border: $color-red-primary 5px solid;
+    border: $color-red-primary .5rem solid;
 
     position: absolute;
     top: 50%;
@@ -105,5 +105,9 @@
 
   &__radio-input:checked + &__radio-label &__radio-button::before {
     opacity: 1;
+  }
+
+  @include respond(tab-port) {
+
   }
 }

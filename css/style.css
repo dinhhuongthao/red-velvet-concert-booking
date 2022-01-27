@@ -468,7 +468,7 @@ body {
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  border: #b52135 5px solid;
+  border: #b52135 0.5rem solid;
   position: absolute;
   top: 50%;
   left: 0;
@@ -843,9 +843,12 @@ body {
     transform: scale(80); }
 
 .section-about {
-  padding: 25vh 0;
+  padding: 30vh 0 15vh;
   margin-top: -20vh;
   background-color: #ffecee; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 25vh 0 20vh; } }
 
 .section-features {
   padding: 30vh 0;
@@ -856,7 +859,7 @@ body {
   transform: skewY(-4deg); }
   @media (max-width: 56.25em) {
     .section-features {
-      padding: 20vh 0; } }
+      padding: 15vh 0; } }
   .section-features > * {
     transform: skewY(4deg); }
 
@@ -885,3 +888,10 @@ body {
     .section-book .book__form {
       padding: 6rem;
       width: 50%; }
+      @media (max-width: 56.25em) {
+        .section-book .book__form {
+          width: 100%;
+          padding: 4rem; } }
+    @media (max-width: 56.25em) {
+      .section-book .book {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.85) 100%, transparent 100%), url("../img/form.jpg"); } }
