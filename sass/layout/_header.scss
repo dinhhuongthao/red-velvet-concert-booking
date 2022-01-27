@@ -1,11 +1,16 @@
 .header {
   background-image: linear-gradient(to right, rgba($color-red-primary, .8), rgba($color-red-dark-1, .8)), url(../img/hero-1.jpg);
   background-size: cover;
+  background-position: center top;
   height: 95vh;
   
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;
@@ -19,6 +24,7 @@
 
 
   &__text-box {
+    width: 100%;
     @include absolute-center;
     text-align: center;
 

@@ -82,6 +82,7 @@
 
 	&__list {
 		list-style: none;
+		width: 100%;
 
 		@include absolute-center;
 	}
