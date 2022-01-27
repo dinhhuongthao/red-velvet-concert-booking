@@ -1,13 +1,4 @@
 .navigation {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	z-index: 1000;
-  
-
 	&__button {
 		width: 7rem;
 		height: 7rem;
@@ -16,35 +7,33 @@
 		cursor: pointer;
 		@include shadow(box, light-lower);
 
-		position: absolute;
+		position: fixed;
 		top: 7rem;
 		right: 7rem;
 		z-index: 3000;
-
-    
 	}
 
-  &__button:hover &__icon::before {
-    top: -1.2rem;
-  }
+	&__button:hover &__icon::before {
+		top: -1.2rem;
+	}
 
-  &__button:hover &__icon::after {
-    bottom: -1.2rem;
-  }
+	&__button:hover &__icon::after {
+		bottom: -1.2rem;
+	}
 
-  &__checkbox:checked ~ &__button &__icon::before {
-    transform: rotateZ(225deg);
-    top: 0;
-  }
+	&__checkbox:checked ~ &__button &__icon::before {
+		transform: rotateZ(225deg);
+		top: 0;
+	}
 
-  &__checkbox:checked ~ &__button &__icon::after {
-    transform: rotateZ(-225deg);
-    bottom: 0;
-  }
+	&__checkbox:checked ~ &__button &__icon::after {
+		transform: rotateZ(-225deg);
+		bottom: 0;
+	}
 
-  &__checkbox:checked ~ &__button &__icon {
-    background-color: transparent;
-  }
+	&__checkbox:checked ~ &__button &__icon {
+		background-color: transparent;
+	}
 
 	&__checkbox {
 		display: none;
@@ -57,8 +46,7 @@
 		width: 3rem;
 		background-color: $color-red-dark-1;
 
-    transition: all .3s ease;
-
+		transition: all 0.3s ease;
 
 		&::before,
 		&::after {
@@ -68,20 +56,18 @@
 			width: 3rem;
 			background-color: $color-red-dark-1;
 			position: absolute;
-      left: 0;
+			left: 0;
 
-      transition: all .3s ease;
+			transition: all 0.3s ease;
 		}
 
 		&::before {
 			top: -1rem;
-
 		}
 
 		&::after {
 			bottom: -1rem;
 		}
-
 	}
 
 	&__bg {
@@ -94,7 +80,7 @@
 			$color-red-dark-1
 		);
 
-		position: absolute;
+		position: fixed;
 		top: 7.25rem;
 		right: 7.25rem;
 		z-index: 2000;
@@ -106,9 +92,12 @@
 		transform: scale(80);
 	}
 
+	&__checkbox:checked ~ &__nav {
+    display: block;
+  }
 
 	&__nav {
-		position: absolute;
+		position: fixed;
 		width: 100%;
 		height: 100vh;
 		top: 0;
